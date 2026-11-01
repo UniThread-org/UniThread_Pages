@@ -43,12 +43,16 @@
     // Supabase rimanda qui anche quando il link è scaduto o già usato,
     // con l'errore nel frammento (#error=...&error_code=otp_expired).
     var parametri = new URLSearchParams(window.location.hash.slice(1) || window.location.search.slice(1));
+    // Toglie i token di sessione dalla barra degli indirizzi e dalla cronologia.
+    if (window.location.hash && history.replaceState) {
+      history.replaceState(null, "", window.location.pathname);
+    }
     if (parametri.get("error") || parametri.get("error_code")) {
       document.getElementById("icona").textContent = "⚠️";
       document.getElementById("icona").className = "icona errore";
       document.getElementById("titolo").textContent = "Link non più valido";
       document.getElementById("testo").textContent =
-        "Il link di conferma è scaduto o è già stato usato. Se hai già confermato l'email, accedi pure dall'app. Altrimenti scrivici a cda.unibooks@gmail.com e ti aiutiamo.";
+        "Il link di conferma è scaduto o è già stato usato. Se hai già confermato l'email, accedi pure dall'app. Altrimenti scrivici a cda.unithread@gmail.com e ti aiutiamo.";
     } else {
       window.location.href = "unibooks://";
     }
