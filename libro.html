@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniThread — Annuncio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #F2F2F7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .card { max-width: 340px; }
+    .icona {
+      width: 72px; height: 72px; background: #E3F2FD; border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 36px;
+    }
+    h1 { font-size: 20px; color: #1C1C1E; margin: 0 0 8px; }
+    p { font-size: 14px; color: #6E6E73; line-height: 1.5; margin: 0 0 24px; }
+    a.btn {
+      display: block; background: #1259A9; color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 14px; margin-bottom: 12px;
+    }
+    a.btn.secondario { background: #fff; color: #1259A9; border: 1px solid #D1D1D6; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #000; }
+      h1 { color: #fff; }
+      p { color: #8E8E93; }
+      .icona { background: #1C2733; }
+      a.btn { background: #1976D2; }
+      a.btn.secondario { background: #1C1C1E; color: #9CC3F2; border-color: #3A3A3C; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Link di condivisione degli annunci dall'app (Condividi in libro.tsx):
+       prova ad aprire l'annuncio nell'app e, se non è installata, offre gli store. -->
+  <div class="card">
+    <div class="icona">📚</div>
+    <h1>Un libro su UniThread</h1>
+    <p id="testo">Ti hanno condiviso un annuncio. Aprilo nell'app per vedere foto, prezzo e venditore.</p>
+    <a class="btn" id="apri" href="unibooks://">Apri in UniThread</a>
+    <a class="btn secondario" href="https://apps.apple.com/it/app/id6810596502" rel="noopener">Scarica su App Store</a>
+    <a class="btn secondario" href="https://play.google.com/store/apps/details?id=org.unibooks.app" rel="noopener">Scarica su Google Play</a>
+  </div>
+  <script>
+    var id = new URLSearchParams(window.location.search).get("id") || "";
+    // Solo un UUID: il valore finisce in un link verso l'app.
+    if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
+      // unibooks:// c'è in tutte le build (unithread:// solo dal 23/10).
+      var link = "unibooks://libro?id=" + id;
+      document.getElementById("apri").href = link;
+      window.location.href = link;
+    } else {
+      document.getElementById("testo").textContent = "Il link non è completo. Apri UniThread e cerca il libro nel Mercato.";
+    }
+  </script>
+</body>
+</html>
