@@ -48,7 +48,7 @@
     <div class="icona">📚</div>
     <h1>Un libro su UniThread</h1>
     <p id="testo">Ti hanno condiviso un annuncio. Aprilo nell'app per vedere foto, prezzo e venditore.</p>
-    <a class="btn" id="apri" href="unithread://">Apri in UniThread</a>
+    <a class="btn" id="apri" href="unibooks://">Apri in UniThread</a>
     <a class="btn secondario" href="https://apps.apple.com/it/app/id6810596502" rel="noopener">Scarica su App Store</a>
     <a class="btn secondario" href="https://play.google.com/store/apps/details?id=org.unibooks.app" rel="noopener">Scarica su Google Play</a>
   </div>
@@ -56,7 +56,8 @@
     var id = new URLSearchParams(window.location.search).get("id") || "";
     // Solo un UUID: il valore finisce in un link verso l'app.
     if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
-      var link = "unithread://libro?id=" + id;
+      // unibooks:// c'è in tutte le build (unithread:// solo dal 23/10).
+      var link = "unibooks://libro?id=" + id;
       document.getElementById("apri").href = link;
       window.location.href = link;
     } else {
