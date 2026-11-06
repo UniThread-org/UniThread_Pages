@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Costi e ambiente — UniThread</title>
+<meta name="description" content="Pubblicare su UniThread è gratis: l'unico costo è quello del pagamento con carta, diviso tra compratore e venditore. Calcola quanto paghi, quanto ricevi e quanta CO₂ eviti.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Costi e ambiente — UniThread">
+<meta property="og:description" content="Pubblicare su UniThread è gratis: l'unico costo è quello del pagamento con carta, diviso tra compratore e venditore. Calcola quanto paghi, quanto ricevi e quanta CO₂ eviti.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unithread.it/costi.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="stile/sito.css?v=3" rel="stylesheet">
+<link href="stile/home.css?v=4" rel="stylesheet">
+<link href="stile/apple.css?v=1" rel="stylesheet">
+</head>
+<body>
+
+<div class="progresso" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="UniThread, pagina iniziale">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></svg>
+      UniThread
+    </a>
+    <nav class="nav-links" id="menu" aria-label="Pagine">
+      <a href="come-funziona.html">Come funziona</a>
+      <a href="sicurezza.html">Sicurezza</a>
+      <a href="costi.html" aria-current="page">Costi</a>
+      <a href="faq.html">FAQ</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+    </nav>
+    <div class="nav-dx">
+      <a class="btn btn-blu btn-nav" href="chi-siamo.html#contatti">Contatti</a>
+      <button class="menu-btn" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ TESTATA ============ -->
+<div class="testata" style="--alone:rgba(255,149,0,0.18);--g1:#C77700;--g2:#1976D2">
+  <div class="wrap">
+    <span class="kicker entra">Costi e ambiente</span>
+    <h1 data-parole>Pubblicare è gratis. <span class="grad">Il resto lo vedi qui.</span></h1>
+    <p class="lede entra" style="animation-delay:.6s">Nessuna commissione di UniThread: solo il costo del pagamento con carta, diviso a metà.</p>
+  </div>
+</div>
+<!-- ============ COSTI ============ -->
+<section class="sez" id="costi">
+  <div class="wrap calc">
+    <div class="calc-testo rivela">
+      <h2 class="titolo-grande">Prova con il tuo prezzo.</h2>
+      <p>UniThread oggi non trattiene nessuna commissione sua. L'unico costo è quello di Stripe per il pagamento con carta, 1,5% + 0,25 €, diviso a metà tra compratore e venditore.</p>
+      <p class="piccolo">Sposta il cursore per provare con il tuo prezzo. Se un acquisto viene annullato, il compratore riceve il rimborso del prezzo del libro; la sua metà del costo di pagamento non è rimborsabile perché Stripe la trattiene comunque.</p>
+    </div>
+    <div class="ricevuta rivela" style="--ritardo:.1s">
+      <div class="top">
+        <small>Prezzo del libro</small>
+        <div class="prezzo-grande" id="calc-prezzo">20 €</div>
+        <input class="cursore-prezzo" id="calc-cursore" type="range" min="1" max="150" value="20" step="1" aria-label="Prezzo del libro in euro">
+      </div>
+      <div class="riga"><span>Metà costo pagamento (compratore)</span><span id="calc-comp">+ 0,28 €</span></div>
+      <div class="riga tot"><span>Il compratore paga</span><span id="calc-tot">20,28 €</span></div>
+      <div class="riga"><span>Metà costo pagamento (venditore)</span><span id="calc-vend">− 0,27 €</span></div>
+      <div class="riga tot verde"><span>Il venditore riceve</span><span id="calc-netto">19,73 €</span></div>
+      <div class="nota" id="calc-nota">Costo totale del pagamento: 0,55 €, diviso tra le due parti.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CO2 ============ -->
+<section class="sez bianca" id="ambiente">
+  <div class="wrap">
+    <div class="co2 rivela">
+      <div class="co2-grid">
+        <div>
+          <div class="kicker">Ambiente</div>
+          <h2>Ogni libro riusato è un libro in meno da stampare.</h2>
+          <p>Produrre un libro nuovo emette in media circa 2,7 kg di CO₂ equivalente. Con UniThread lo stesso libro serve a più studenti, uno dopo l'altro.</p>
+          <p class="fonte">Stima usata nell'app. Auto: 161,7 g di CO₂/km, media del parco circolante (ISPRA, 2022).</p>
+        </div>
+        <div class="co2-calc">
+          <label for="co2-cursore"><span>Libri usati invece che nuovi</span><span id="co2-n">5</span></label>
+          <input id="co2-cursore" type="range" min="1" max="40" value="5">
+          <div class="co2-out">
+            <div><div class="v" id="co2-kg">13,5</div><small>kg di CO₂ evitati</small></div>
+            <div><div class="v" id="co2-km">83</div><small>km in auto equivalenti</small></div>
+          </div>
+          <div class="strada" aria-hidden="true"><span>🚗</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="prossima">
+  <div class="wrap rivela"><small>Continua</small><a href="faq.html">Domande frequenti <span aria-hidden="true">›</span></a></div>
+</div>
+</main>
+
+<footer class="piede">
+  <div class="wrap">
+    <div class="colonne">
+      <div>
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></svg>
+          UniThread
+        </a>
+        <p>Il marketplace dei libri universitari usati, tra studenti dello stesso ateneo. Nato al Politecnico di Milano.</p>
+      </div>
+      <div>
+        <b>Esplora</b>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="sicurezza.html">Sicurezza</a>
+        <a href="costi.html">Costi</a>
+        <a href="faq.html">FAQ</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+      </div>
+      <div>
+        <b>Documenti</b>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="termini-condizioni.html">Termini e Condizioni</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="delete-account.html">Elimina account</a>
+        <a href="mailto:cda.unithread@gmail.com">cda.unithread@gmail.com</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 UniThread · Fabrizio Paveri Fontana e Claudio Consoli · Milano</div>
+  </div>
+</footer>
+
+<script src="stile/sito.js?v=3"></script>
+<script src="stile/home.js?v=3"></script>
+</body>
+</html>
