@@ -6,26 +6,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Cookie Policy di UniThread: il sito non usa cookie né tracciamento; cosa usa l'app.">
 <title>UniThread — Cookie Policy</title>
-<link href="fonts/fonts.css?v=2" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
-<link href="stile/sito.css?v=2" rel="stylesheet">
+<link href="stile/sito.css?v=3" rel="stylesheet">
+<link href="stile/apple.css?v=1" rel="stylesheet">
 </head>
 <body>
 
 <div class="progresso" aria-hidden="true"></div>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html#top" aria-label="UniThread, pagina iniziale">
+    <a class="brand" href="index.html" aria-label="UniThread, pagina iniziale">
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></svg>
       UniThread
     </a>
-    <nav class="nav-links" aria-label="Sezioni">
-      <a class="opz2" href="index.html#come-funziona">Come funziona</a>
-      <a class="opz" href="index.html#sicurezza">Sicurezza</a>
-      <a class="opz" href="index.html#costi">Costi</a>
-      <a href="index.html#faq">FAQ</a>
-      <a class="btn btn-blu" href="index.html#contatti">Contatti</a>
+    <nav class="nav-links" id="menu" aria-label="Pagine">
+      <a href="come-funziona.html">Come funziona</a>
+      <a href="sicurezza.html">Sicurezza</a>
+      <a href="costi.html">Costi</a>
+      <a href="faq.html">FAQ</a>
+      <a href="chi-siamo.html">Chi siamo</a>
     </nav>
+    <div class="nav-dx">
+      <a class="btn btn-blu btn-nav" href="chi-siamo.html#contatti">Contatti</a>
+      <button class="menu-btn" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -109,23 +113,35 @@
 
 <footer class="piede">
   <div class="wrap">
-    <div class="foot">
-      <a class="brand" href="index.html#top">
-        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></svg>
-        UniThread
-      </a>
-      <nav aria-label="Documenti">
+    <div class="colonne">
+      <div>
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></svg>
+          UniThread
+        </a>
+        <p>Il marketplace dei libri universitari usati, tra studenti dello stesso ateneo. Nato al Politecnico di Milano.</p>
+      </div>
+      <div>
+        <b>Esplora</b>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="sicurezza.html">Sicurezza</a>
+        <a href="costi.html">Costi</a>
+        <a href="faq.html">FAQ</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+      </div>
+      <div>
+        <b>Documenti</b>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="termini-condizioni.html">Termini e Condizioni</a>
         <a href="cookie-policy.html">Cookie Policy</a>
         <a href="delete-account.html">Elimina account</a>
-        <a href="mailto:cda.unithread@gmail.com">Contatti</a>
-      </nav>
+        <a href="mailto:cda.unithread@gmail.com">cda.unithread@gmail.com</a>
+      </div>
     </div>
-    <div class="copy">© 2026 UniThread · Fabrizio Paveri Fontana e Claudio Consoli · Milano · <a href="mailto:cda.unithread@gmail.com">cda.unithread@gmail.com</a></div>
+    <div class="copy">© 2026 UniThread · Fabrizio Paveri Fontana e Claudio Consoli · Milano</div>
   </div>
 </footer>
 
-<script src="stile/sito.js?v=2"></script>
+<script src="stile/sito.js?v=3"></script>
 </body>
 </html>
