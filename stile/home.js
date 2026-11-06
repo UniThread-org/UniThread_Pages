@@ -78,6 +78,7 @@
   // Racconto: su schermo largo il telefono resta fermo e cambia schermata
   // in base al passo che stai leggendo; su telefono ogni passo ha la sua copia.
   var telRacconto = document.getElementById('telefono-racconto');
+  if (telRacconto) {
   var schermate = {};
   telRacconto.querySelectorAll('.scr').forEach(function (s) { schermate[s.dataset.id] = s; });
   function mostra(id) {
@@ -132,6 +133,7 @@
   });
   window.addEventListener('resize', posizionaCursore);
   posizionaCursore();
+  }
 
   // Schede che si inclinano seguendo il puntatore (solo con mouse).
   if (!ridotto && window.matchMedia('(hover: hover)').matches) {
@@ -157,8 +159,8 @@
 
   // Tema chiaro / scuro da toccare.
   var ts = document.querySelector('.tema-switch');
-  ts.addEventListener('click', function () { ts.dataset.tema = ts.dataset.tema === 'chiaro' ? 'scuro' : 'chiaro'; });
-  if (!ridotto) setInterval(function () { if (!ts.matches(':hover')) ts.click(); }, 3500);
+  if (ts) ts.addEventListener('click', function () { ts.dataset.tema = ts.dataset.tema === 'chiaro' ? 'scuro' : 'chiaro'; });
+  if (ts && !ridotto) setInterval(function () { if (!ts.matches(':hover')) ts.click(); }, 3500);
 
   // QR grande: ogni tanto "viene scansionato".
   var esito = document.getElementById('esito-qr');
@@ -187,8 +189,7 @@
     document.getElementById('calc-nota').textContent = 'Costo totale del pagamento: ' + euro(totale) + ', diviso tra le due parti.';
     riempi(cur, '#fff', 'rgba(255,255,255,0.3)');
   }
-  cur.addEventListener('input', calcola);
-  calcola();
+  if (cur) { cur.addEventListener('input', calcola); calcola(); }
 
   // CO2: 2,7 kg per libro, auto a 161,7 g/km (stesse costanti dell'app).
   var co2 = document.getElementById('co2-cursore');
@@ -199,8 +200,7 @@
     document.getElementById('co2-km').textContent = Math.round(kg * 1000 / 161.7);
     riempi(co2, '#2E7D32', '#C8E6C9');
   }
-  co2.addEventListener('input', calcolaCO2);
-  calcolaCO2();
+  if (co2) { co2.addEventListener('input', calcolaCO2); calcolaCO2(); }
 
   // FAQ: apertura e chiusura animate.
   document.querySelectorAll('.faq details').forEach(function (d) {
