@@ -84,3 +84,25 @@
   window.addEventListener('scroll', function () { if (!inAttesa) { inAttesa = true; requestAnimationFrame(aggiorna); } }, { passive: true });
   aggiorna();
 })();
+
+// Caroselli in stile Apple Store: frecce che scorrono di una "pagina".
+(function () {
+  document.querySelectorAll('.blocco').forEach(function (b) {
+    var sc = b.querySelector('.scaffale'), ind = b.querySelector('.frecce .indietro'), av = b.querySelector('.frecce .avanti');
+    if (!sc || !ind || !av) return;
+    function stato() {
+      ind.disabled = sc.scrollLeft < 4;
+      av.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4;
+    }
+    function vai(dir) {
+      var primo = sc.children[0], passo = primo ? primo.getBoundingClientRect().width + 20 : 360;
+      var n = Math.max(1, Math.floor((sc.clientWidth - 80) / passo));
+      sc.scrollBy({ left: dir * n * passo, behavior: 'smooth' });
+    }
+    ind.addEventListener('click', function () { vai(-1); });
+    av.addEventListener('click', function () { vai(1); });
+    sc.addEventListener('scroll', function () { requestAnimationFrame(stato); }, { passive: true });
+    window.addEventListener('resize', stato);
+    stato();
+  });
+})();

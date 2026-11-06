@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UniThread — Il marketplace dei libri universitari</title>
 <meta name="description" content="UniThread è l'app dove gli studenti della stessa università comprano e vendono libri di corso usati: chat, offerte, pagamento protetto e scambio di persona con QR. Si parte dal Politecnico di Milano.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#F2F2F7">
 <meta property="og:title" content="UniThread — Il marketplace dei libri universitari">
 <meta property="og:description" content="UniThread è l'app dove gli studenti della stessa università comprano e vendono libri di corso usati: chat, offerte, pagamento protetto e scambio di persona con QR. Si parte dal Politecnico di Milano.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://unithread.it/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="fonts/fonts.css?v=2" rel="stylesheet">
 <link href="stile/sito.css?v=3" rel="stylesheet">
 <link href="stile/home.css?v=4" rel="stylesheet">
-<link href="stile/apple.css?v=1" rel="stylesheet">
+<link href="stile/apple.css?v=2" rel="stylesheet">
 </head>
 <body>
 
@@ -87,66 +88,34 @@
   </div>
 </div>
 
-<!-- ============ FRASE ============ -->
-<section class="frase" aria-label="In breve">
-  <div class="wrap">
-    <p data-frase>Cerchi il libro del tuo esame. <span class="blu">Lo trovi da chi l'ha appena usato,</span> nella tua università. Paghi protetto, vi incontrate, <span class="blu">e il libro continua a vivere.</span></p>
+<nav class="icone" aria-label="Pagine del sito">
+  <a class="icona" href="index.html" aria-current="page"><i style="background:#E8F0FE">🏠</i>Home</a>
+  <a class="icona" href="come-funziona.html"><i style="background:#E8F0FE">📱</i>Come funziona</a>
+  <a class="icona" href="sicurezza.html"><i style="background:#E8F5E9">🔒</i>Sicurezza</a>
+  <a class="icona" href="costi.html"><i style="background:#FFF3E0">💶</i>Costi</a>
+  <a class="icona" href="faq.html"><i style="background:#FFF8E1">💬</i>FAQ</a>
+  <a class="icona" href="chi-siamo.html"><i style="background:#FFF0F0">🎓</i>Chi siamo</a>
+</nav>
+<section class="blocco">
+  <div class="wrap testa-scaffale">
+    <h2 class="due-toni">Scopri UniThread. <span>Tutto quello che c'è da sapere.</span></h2>
+    <div class="frecce"><button type="button" class="indietro" aria-label="Indietro">&#8249;</button><button type="button" class="avanti" aria-label="Avanti">&#8250;</button></div>
+  </div>
+  <div class="scaffale">
+    <a class="scheda blu larga rivela" style="--ritardo:0.00s" href="come-funziona.html"><span class="k">Come funziona</span><h3>Dall'annuncio allo scambio, in sei passi.</h3><p>Cosa succede quando compri e quando vendi, schermata per schermata.</p><div class="illu illu-vetro"><span class="emoji-grande">📱</span></div><span class="piu" aria-hidden="true">+</span></a>
+    <a class="scheda  rivela" style="--ritardo:0.06s;--c:#2E7D32" href="sicurezza.html"><span class="k">Sicurezza</span><h3>Uno scambio, non un atto di fede.</h3><p>Il venditore riceve i soldi solo quando scansiona il tuo QR.</p><div class="illu illu-verde"><span class="emoji-grande">🔒</span></div><span class="piu" aria-hidden="true">+</span></a>
+    <a class="scheda  rivela" style="--ritardo:0.12s;--c:#C77700" href="costi.html"><span class="k">Costi e ambiente</span><h3>Pubblicare è gratis.</h3><p>Calcola quanto paghi, quanto ricevi e quanta CO₂ eviti.</p><div class="illu illu-arancio"><span class="emoji-grande">💶</span></div><span class="piu" aria-hidden="true">+</span></a>
+    <a class="scheda  rivela" style="--ritardo:0.18s;--c:#5E5CE6" href="faq.html"><span class="k">Domande frequenti</span><h3>Le risposte veloci.</h3><p>Chi può usarla, quando esce, come ricevi i soldi.</p><div class="illu illu-oro"><span class="emoji-grande">💬</span></div><span class="piu" aria-hidden="true">+</span></a>
+    <a class="scheda  rivela" style="--ritardo:0.24s;--c:#C62828" href="chi-siamo.html"><span class="k">Chi siamo</span><h3>Due studenti del Politecnico.</h3><p>Chi c'è dietro UniThread e come scriverci.</p><div class="illu illu-rossa"><span class="emoji-grande">🎓</span></div><span class="piu" aria-hidden="true">+</span></a>
   </div>
 </section>
-<!-- ============ NUMERI ============ -->
-<section class="sez" style="padding-top:72px">
-  <div class="wrap">
-    <div class="numeri">
-      <div class="numero rivela"><div class="n" data-conta="1" data-suffisso=" ateneo">0</div><div class="d">Vedi solo annunci di studenti della tua università</div></div>
-      <div class="numero rivela" style="--ritardo:.08s"><div class="n" data-conta="0" data-suffisso=" €">0 €</div><div class="d">per scaricare l'app e pubblicare annunci</div></div>
-      <div class="numero rivela" style="--ritardo:.16s"><div class="n" data-conta="100" data-suffisso="%">0%</div><div class="d">dei pagamenti custoditi fino allo scambio</div></div>
-      <div class="numero rivela" style="--ritardo:.24s"><div class="n" data-conta="2.7" data-decimali="1" data-suffisso=" kg">0 kg</div><div class="d">di CO₂ evitati per ogni libro riusato</div></div>
-    </div>
+<section class="blocco" id="funzioni">
+  <div class="wrap testa-scaffale">
+    <h2 class="due-toni">Le funzioni. <span>Pensate per come studi.</span></h2>
+    <div class="frecce"><button type="button" class="indietro" aria-label="Indietro">&#8249;</button><button type="button" class="avanti" aria-label="Avanti">&#8250;</button></div>
   </div>
-</section>
-
-<!-- ============ PERCHÉ ============ -->
-<section class="sez" id="perche">
-  <div class="wrap">
-    <div class="sez-head rivela">
-      <div class="kicker">Perché UniThread</div>
-      <h2>Un libro usato per un semestre non dovrebbe costare come uno nuovo.</h2>
-      <p>Ogni anno migliaia di studenti comprano gli stessi manuali, li usano per un esame e li lasciano su uno scaffale. L'anno dopo, chi segue lo stesso corso li ricompra a prezzo pieno. UniThread li fa passare di mano in mano, dentro la stessa università.</p>
-    </div>
-    <div class="tre">
-      <div class="card rivela"><div class="presto" style="background:var(--tinta-blu);color:var(--primary)">La tua università</div><h3>Solo studenti del tuo ateneo</h3><p>Libri dei tuoi corsi, venditori che puoi incontrare tra una lezione e l'altra.</p></div>
-      <div class="card rivela" style="--ritardo:.1s"><div class="presto" style="background:var(--tinta-verde);color:var(--verde)">Risparmio</div><h3>Spendi meno, recuperi qualcosa</h3><p>Chi compra paga meno del prezzo da nuovo, chi vende recupera parte della spesa invece di lasciare il libro a prendere polvere.</p></div>
-      <div class="card rivela" style="--ritardo:.2s"><div class="presto">Tranquillità</div><h3>Nessun salto nel buio</h3><p>Paghi in app, ma il venditore riceve i soldi solo quando vi incontrate e confermate lo scambio con un QR.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ESPLORA ============ -->
-<section class="sez bianca" id="esplora">
-  <div class="wrap">
-    <div class="sez-head rivela">
-      <div class="kicker">Scopri UniThread</div>
-      <h2>Tutto quello che c'è da sapere.</h2>
-    </div>
-    <div class="esplora">
-      <a class="vai largo blu rivela" href="come-funziona.html"><span class="k">Come funziona</span><h3>Dall'annuncio allo scambio, in sei passi.</h3><p>Scopri cosa succede quando compri e quando vendi, schermata per schermata.</p><span class="link-freccia">Guarda come funziona</span><span class="simbolo" aria-hidden="true">📱</span></a>
-      <a class="vai largo scuro rivela" style="--ritardo:.1s;--c:#4DA3FF" href="sicurezza.html"><span class="k">Sicurezza</span><h3>Uno scambio, non un atto di fede.</h3><p>Pagamento custodito fino al QR, rimborso se cambi idea, carte gestite da Stripe.</p><span class="link-freccia">Come ti proteggiamo</span><span class="simbolo" aria-hidden="true">🔒</span></a>
-      <a class="vai rivela" style="--c:#2E7D32" href="costi.html"><span class="k">Costi e ambiente</span><h3>Pubblicare è gratis.</h3><p>Calcola quanto paghi e quanto ricevi, e quanta CO₂ eviti.</p><span class="link-freccia">Fai i conti</span><span class="simbolo" aria-hidden="true">💶</span></a>
-      <a class="vai rivela" style="--ritardo:.1s;--c:#C77700" href="faq.html"><span class="k">FAQ</span><h3>Le risposte veloci.</h3><p>Chi può usarla, quando esce, come ricevi i soldi.</p><span class="link-freccia">Leggi le domande</span><span class="simbolo" aria-hidden="true">💬</span></a>
-      <a class="vai rivela" style="--ritardo:.2s;--c:#5E5CE6" href="chi-siamo.html"><span class="k">Chi siamo</span><h3>Due studenti del Politecnico.</h3><p>Chi c'è dietro UniThread, dove stiamo andando e come scriverci.</p><span class="link-freccia">Conosci il team</span><span class="simbolo" aria-hidden="true">🎓</span></a>
-    </div>
-  </div>
-</section>
-<!-- ============ FUNZIONI (bento) ============ -->
-<section class="sez" id="funzioni">
-  <div class="wrap">
-    <div class="sez-head rivela">
-      <div class="kicker">Funzioni</div>
-      <h2>Pensata per come studi.</h2>
-      <p>Ogni funzione parte dalla vita di uno studente universitario.</p>
-    </div>
-    <div class="bento">
-      <div class="tile t3 rivela inclina">
+  <div class="scaffale">
+    <div class="scheda rivela" style="--ritardo:0.00s">
         <div class="illu illu-verde"><div class="piano" id="piano">
           <div class="fatto"><i></i><span>Analisi Matematica 1</span></div>
           <div><i></i><span>Fisica Sperimentale</span><em>3 libri</em></div>
@@ -155,17 +124,17 @@
         <h3>Il tuo piano di studi</h3>
         <p>Aggiungi le materie e segna gli esami superati: in cima al Mercato trovi subito i libri di quelli che ti mancano.</p>
       </div>
-      <div class="tile t3 rivela inclina" style="--ritardo:.1s">
+    <div class="scheda rivela" style="--ritardo:0.06s">
         <div class="illu illu-rossa"><div class="isbn"><div class="barre"></div><small>978-88-08-</small><span class="linea-scan rossa"></span></div></div>
         <h3>Annuncio in un minuto</h3>
         <p>Scansioni il codice ISBN e i dati del libro si compilano da soli. Restano foto, condizioni e prezzo, con un prezzo suggerito.</p>
       </div>
-      <div class="tile t2 rivela inclina">
+    <div class="scheda rivela" style="--ritardo:0.12s">
         <div class="illu illu-arancio"><div class="bolle-tile"><div class="bolla lei">Faresti 15 €?</div><div class="bolla io">Va bene! 👍</div></div></div>
         <h3>Chat e offerte</h3>
         <p>Scrivi in tempo reale e proponi il tuo prezzo.</p>
       </div>
-      <div class="tile t2 rivela inclina" style="--ritardo:.1s">
+    <div class="scheda rivela" style="--ritardo:0.18s">
         <div class="illu illu-blu"><div class="pila">
           <div><i style="background:var(--primary)"></i><span><b>Nuovo messaggio</b>Giulia: ci vediamo alle 12?</span></div>
           <div><i style="background:#34C759"></i><span><b>Libro venduto</b>Fisica 1 · 25 €</span></div>
@@ -174,32 +143,45 @@
         <h3>Notifiche utili</h3>
         <p>Messaggi, offerte, vendite e nuovi libri: scegli tu quali ricevere.</p>
       </div>
-      <div class="tile t2 rivela inclina" style="--ritardo:.2s">
+    <div class="scheda rivela" style="--ritardo:0.18s">
         <div class="illu illu-oro"><div class="stelle-tile">★★★★★</div></div>
         <h3>Recensioni</h3>
         <p>Dopo ogni scambio vi valutate a vicenda: la serietà si vede sul profilo.</p>
       </div>
-      <div class="tile t2 mezza rivela inclina">
+    <div class="scheda rivela" style="--ritardo:0.18s">
         <div class="illu illu-rossa"><div class="salvati"><span class="c-blu"></span><span class="c-oro"></span><span class="c-verde"></span></div></div>
         <h3>Salvati</h3>
         <p>Metti da parte gli annunci e ritrovali quando ti servono.</p>
       </div>
-      <div class="tile t2 mezza rivela inclina" style="--ritardo:.1s">
+    <div class="scheda rivela" style="--ritardo:0.18s">
         <div class="illu illu-verde"><span class="germoglio">🌱</span></div>
         <h3>Il tuo impatto</h3>
         <p>Quanti libri hai comprato e venduto e quanta CO₂ hai evitato.</p>
       </div>
-      <div class="tile t2 rivela inclina" style="--ritardo:.2s">
+    <div class="scheda rivela" style="--ritardo:0.18s">
         <div class="illu illu-blu"><button class="tema-switch" data-tema="chiaro" aria-label="Cambia tema dell'esempio"><span class="chiaro">Chiaro</span><span class="scuro">Scuro</span></button></div>
         <h3>Chiara o scura</h3>
         <p>Segue il tema del telefono, o lo scegli tu. Prova a toccare.</p>
       </div>
-    </div>
   </div>
 </section>
-
+<section class="blocco" id="perche">
+  <div class="wrap testa-scaffale">
+    <h2 class="due-toni">Perché UniThread. <span>Un libro usato per un semestre non dovrebbe costare come uno nuovo.</span></h2>
+    <div class="frecce"><button type="button" class="indietro" aria-label="Indietro">&#8249;</button><button type="button" class="avanti" aria-label="Avanti">&#8250;</button></div>
+  </div>
+  <div class="scaffale">
+    <div class="scheda piccola rivela" style="--ritardo:0.00s"><span class="k">La tua università</span><h3>Solo studenti del tuo ateneo</h3><p>Libri dei tuoi corsi, venditori che puoi incontrare tra una lezione e l'altra.</p></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.06s"><span class="k">Risparmio</span><h3>Spendi meno, recuperi qualcosa</h3><p>Chi compra paga meno del prezzo da nuovo, chi vende recupera parte della spesa invece di lasciare il libro a prendere polvere.</p></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.12s"><span class="k">Tranquillità</span><h3>Nessun salto nel buio</h3><p>Paghi in app, ma il venditore riceve i soldi solo quando vi incontrate e confermate lo scambio con un QR.</p></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.18s"><span class="k">In numeri</span><p>Vedi solo annunci di studenti della tua università</p><div class="numero-grande" data-conta="1" data-suffisso=" ateneo">0</div></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.24s"><span class="k">In numeri</span><p>Per scaricare l'app e pubblicare annunci</p><div class="numero-grande" data-conta="0" data-suffisso=" €">0 €</div></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.30s"><span class="k">In numeri</span><p>Dei pagamenti custoditi fino allo scambio</p><div class="numero-grande" data-conta="100" data-suffisso="%">0%</div></div>
+    <div class="scheda piccola rivela" style="--ritardo:0.36s"><span class="k">In numeri</span><p>Di CO₂ evitati per ogni libro riusato</p><div class="numero-grande" data-conta="2.7" data-decimali="1" data-suffisso=" kg">0 kg</div></div>
+  </div>
+</section>
 <!-- ============ CONTATTI ============ -->
-<section class="sez bianca" id="contatti">
+<section class="sez" id="contatti">
   <div class="wrap">
     <div class="chiusura rivela">
       <h2>Partiamo dal Politecnico di Milano.</h2>
@@ -249,7 +231,7 @@
   </div>
 </footer>
 
-<script src="stile/sito.js?v=3"></script>
-<script src="stile/home.js?v=3"></script>
+<script src="stile/sito.js?v=4"></script>
+<script src="stile/home.js?v=4"></script>
 </body>
 </html>
