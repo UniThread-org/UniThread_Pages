@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sicurezza — UniThread</title>
 <meta name="description" content="Su UniThread il venditore riceve i soldi solo dopo la scansione del QR allo scambio di persona. Carte gestite da Stripe, email verificata, segnalazioni e blocco.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#F2F2F7">
 <meta property="og:title" content="Sicurezza — UniThread">
 <meta property="og:description" content="Su UniThread il venditore riceve i soldi solo dopo la scansione del QR allo scambio di persona. Carte gestite da Stripe, email verificata, segnalazioni e blocco.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://unithread.it/sicurezza.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="fonts/fonts.css?v=2" rel="stylesheet">
 <link href="stile/sito.css?v=3" rel="stylesheet">
 <link href="stile/home.css?v=4" rel="stylesheet">
-<link href="stile/apple.css?v=1" rel="stylesheet">
+<link href="stile/apple.css?v=2" rel="stylesheet">
 </head>
 <body>
 
@@ -39,14 +40,20 @@
 </header>
 
 <main>
-<!-- ============ TESTATA ============ -->
-<div class="testata" style="--alone:rgba(46,125,50,0.2);--g1:#2E7D32;--g2:#1976D2">
-  <div class="wrap">
-    <span class="kicker entra">Sicurezza</span>
-    <h1 data-parole>Uno scambio, <span class="grad">non un atto di fede.</span></h1>
-    <p class="lede entra" style="animation-delay:.6s">I soldi restano custoditi finché non vi incontrate e confermate lo scambio con un QR.</p>
+<div class="testata">
+  <div class="wrap riga">
+    <h1 class="entra">Sicurezza</h1>
+    <p class="lede entra" style="animation-delay:.15s">Uno scambio, <span>non un atto di fede.</span></p>
   </div>
 </div>
+<nav class="icone" aria-label="Pagine del sito">
+  <a class="icona" href="index.html"><i style="background:#E8F0FE">🏠</i>Home</a>
+  <a class="icona" href="come-funziona.html"><i style="background:#E8F0FE">📱</i>Come funziona</a>
+  <a class="icona" href="sicurezza.html" aria-current="page"><i style="background:#E8F5E9">🔒</i>Sicurezza</a>
+  <a class="icona" href="costi.html"><i style="background:#FFF3E0">💶</i>Costi</a>
+  <a class="icona" href="faq.html"><i style="background:#FFF8E1">💬</i>FAQ</a>
+  <a class="icona" href="chi-siamo.html"><i style="background:#FFF0F0">🎓</i>Chi siamo</a>
+</nav>
 <!-- ============ SICUREZZA ============ -->
 <section class="sez" id="sicurezza">
   <div class="wrap sicuro">
@@ -68,7 +75,7 @@
 </section>
 
 <div class="prossima">
-  <div class="wrap rivela"><small>Continua</small><a href="costi.html">Costi e ambiente <span aria-hidden="true">›</span></a></div>
+  <div class="wrap rivela"><a href="costi.html"><span><small>Continua</small><b>Costi e ambiente</b></span><span class="piu" aria-hidden="true">&#8250;</span></a></div>
 </div>
 </main>
 
@@ -103,7 +110,7 @@
   </div>
 </footer>
 
-<script src="stile/sito.js?v=3"></script>
-<script src="stile/home.js?v=3"></script>
+<script src="stile/sito.js?v=4"></script>
+<script src="stile/home.js?v=4"></script>
 </body>
 </html>
