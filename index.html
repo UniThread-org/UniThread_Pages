@@ -13,8 +13,8 @@
 <meta property="og:url" content="https://unithread.it/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
 <link href="fonts/fonts.css?v=2" rel="stylesheet">
-<link href="stile/sito.css?v=3" rel="stylesheet">
-<link href="stile/home.css?v=4" rel="stylesheet">
+<link href="stile/sito.css?v=4" rel="stylesheet">
+<link href="stile/home.css?v=5" rel="stylesheet">
 <link href="stile/apple.css?v=2" rel="stylesheet">
 </head>
 <body>
@@ -54,12 +54,9 @@
       <a class="btn btn-blu" href="come-funziona.html">Scopri come funziona</a>
       <a class="btn btn-chiaro" href="costi.html">Quanto costa?</a>
     </div>
-    <p class="store-note entra" style="animation-delay:1s"><span class="dot"></span> In arrivo su App Store e Google Play</p>
-    <!-- Al lancio: togliere "hidden" dai due blocchi .store-btns e cancellare la riga .store-note qui sopra. -->
-    <div class="store-btns entra" style="animation-delay:1s" hidden>
-      <a class="btn btn-store" href="https://apps.apple.com/it/app/id6810596502" target="_blank" rel="noopener"><small>Scarica su</small> App Store</a>
-      <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=org.unibooks.app" target="_blank" rel="noopener"><small>Disponibile su</small> Google Play</a>
-    </div>
+    <!-- Badge degli store: l'interruttore del lancio è in stile/store.js -->
+    <p class="store-note entra" style="animation-delay:1s" data-store-attesa><span class="dot"></span> In arrivo su App Store e Google Play · <a href="#scarica">QR per scaricare</a></p>
+    <div class="entra" style="animation-delay:1s" data-store-pronto hidden><div class="badge-store-riga centro"><a class="badge-store" data-store="ios" href="https://apps.apple.com/it/app/id6810596502" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.15-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.02.08 2.07-.52 2.71-1.28z"/></svg><span><small data-store-etichetta>Scarica su</small>App Store</span></a><a class="badge-store" data-store="android" href="https://play.google.com/store/apps/details?id=org.unibooks.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.1 2.6c-.2.2-.3.6-.3 1v16.8c0 .4.1.8.3 1l9.4-9.4z" fill="#00D7FE"/><path d="M16.6 8.9 5.8 2.7c-.6-.4-1.2-.4-1.7-.1l9.4 9.4z" fill="#32E17E"/><path d="M19.8 10.7l-3.2-1.8-3.1 3.1 3.1 3.1 3.2-1.8c.9-.5.9-2.1 0-2.6z" fill="#FFC300"/><path d="M4.1 21.4c.5.3 1.1.3 1.7-.1l10.8-6.2-3.1-3.1z" fill="#FF3A44"/></svg><span><small data-store-etichetta>Disponibile su</small>Google Play</span></a></div></div>
 
     <div class="palco" aria-hidden="true">
       <div class="fluttua f1"><span class="ic" style="background:var(--tinta-arancio)">💬</span><div><b>Nuova offerta: 15 €</b><small>Analisi Matematica 1</small></div></div>
@@ -181,16 +178,31 @@
     <div class="scheda piccola rivela" style="--ritardo:0.36s"><span class="k">In numeri</span><p>Di CO₂ evitati per ogni libro riusato</p><div class="numero-grande" data-conta="2.7" data-decimali="1" data-suffisso=" kg">0 kg</div></div>
   </div>
 </section>
+<!-- ============ SCARICA ============ -->
+<section class="sez" id="scarica">
+  <div class="wrap">
+    <div class="scarica rivela">
+      <div class="scarica-testo">
+        <span class="k">Scarica l'app</span>
+        <h2>UniThread sul tuo telefono<span class="punto">.</span></h2>
+        <p data-store-attesa>Sta per arrivare su App Store e Google Play. Segui <a href="https://www.instagram.com/unithread.it" target="_blank" rel="noopener">@unithread.it</a> per sapere quando esce<span class="solo-computer">: il QR qui accanto è già pronto e ti porterà allo store giusto</span>.</p>
+        <p data-store-pronto hidden>Gratis su iPhone e Android.<span class="solo-computer"> Inquadra il QR con il telefono: ti porta allo store giusto.</span></p>
+        <div class="badge-store-riga"><a class="badge-store" data-store="ios" href="https://apps.apple.com/it/app/id6810596502" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.15-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.02.08 2.07-.52 2.71-1.28z"/></svg><span><small data-store-etichetta>Scarica su</small>App Store</span></a><a class="badge-store" data-store="android" href="https://play.google.com/store/apps/details?id=org.unibooks.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.1 2.6c-.2.2-.3.6-.3 1v16.8c0 .4.1.8.3 1l9.4-9.4z" fill="#00D7FE"/><path d="M16.6 8.9 5.8 2.7c-.6-.4-1.2-.4-1.7-.1l9.4 9.4z" fill="#32E17E"/><path d="M19.8 10.7l-3.2-1.8-3.1 3.1 3.1 3.1 3.2-1.8c.9-.5.9-2.1 0-2.6z" fill="#FFC300"/><path d="M4.1 21.4c.5.3 1.1.3 1.7-.1l10.8-6.2-3.1-3.1z" fill="#FF3A44"/></svg><span><small data-store-etichetta>Disponibile su</small>Google Play</span></a></div>
+      </div>
+      <div class="scarica-qr">
+        <div class="qr-cornice"><svg class="qr-scarica" viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR code per scaricare UniThread: porta a unithread.it/scarica"><path stroke="#0B2E5C" d="M0 0.5h7m3 0h1m1 0h2m3 0h2m2 0h1m1 0h2m1 0h7m-33 1h1m5 0h1m3 0h1m6 0h4m1 0h2m2 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h3m3 0h1m1 0h3m2 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m6 0h2m1 0h1m1 0h3m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h4m2 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h2m1 0h2m3 0h1m1 0h2m1 0h2m2 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h3m1 0h3m2 0h4m1 0h1m1 0h1m-23 1h2m2 0h4m3 0h1m2 0h3m2 0h1m1 0h1m1 0h2m1 0h1m-27 1h1m1 0h2m4 0h2m1 0h1m1 0h2m1 0h6m1 0h2m2 0h1m2 0h1m-32 1h4m1 0h11m3 0h1m2 0h4m2 0h4m-30 1h1m5 0h5m1 0h3m1 0h2m2 0h1m1 0h1m1 0h3m-30 1h1m4 0h2m1 0h1m4 0h1m1 0h1m1 0h3m1 0h1m2 0h2m1 0h1m3 0h1m-31 1h3m3 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m4 0h1m-30 1h1m2 0h1m2 0h2m3 0h3m4 0h2m1 0h1m4 0h1m1 0h3m-30 1h1m1 0h1m1 0h1m2 0h1m1 0h1m5 0h1m4 0h7m1 0h2m-31 1h1m2 0h4m5 0h1m5 0h4m1 0h4m1 0h4m-32 1h1m1 0h4m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m-31 1h1m3 0h1m2 0h2m3 0h1m3 0h4m3 0h3m2 0h2m-30 1h1m6 0h2m2 0h3m1 0h1m2 0h1m1 0h1m4 0h1m3 0h2m-30 1h5m3 0h1m2 0h5m2 0h1m2 0h1m1 0h2m1 0h4m-33 1h1m1 0h4m1 0h1m2 0h4m1 0h1m1 0h1m2 0h2m2 0h1m4 0h1m2 0h1m-30 1h1m1 0h2m2 0h2m1 0h1m2 0h1m2 0h1m1 0h2m1 0h2m1 0h2m1 0h2m1 0h1m-32 1h4m3 0h1m2 0h3m3 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h1m-32 1h1m2 0h1m2 0h1m3 0h3m2 0h1m2 0h2m2 0h1m1 0h5m2 0h1m-24 1h2m2 0h2m1 0h1m2 0h2m1 0h1m1 0h2m3 0h4m-32 1h7m1 0h2m1 0h3m6 0h2m1 0h2m1 0h1m1 0h2m-30 1h1m5 0h1m2 0h1m2 0h1m1 0h6m3 0h2m3 0h5m-33 1h1m1 0h3m1 0h1m5 0h1m1 0h1m2 0h2m1 0h1m1 0h7m1 0h2m-32 1h1m1 0h3m1 0h1m1 0h1m7 0h1m1 0h1m2 0h4m2 0h1m-28 1h1m1 0h3m1 0h1m1 0h3m8 0h2m3 0h3m2 0h2m-31 1h1m5 0h1m2 0h2m1 0h2m2 0h2m2 0h1m1 0h1m1 0h1m4 0h1m2 0h1m-33 1h7m7 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h2"/><rect x="12.27" y="12.27" width="8.46" height="8.46" rx="1.4" fill="#fff"/><g transform="translate(12.87,12.87) scale(0.1134)"><rect width="64" height="64" rx="14" fill="#1565C0"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#fff"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#fff"/></g></svg></div>
+        <small>Inquadra con la fotocamera</small>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ CONTATTI ============ -->
 <section class="sez" id="contatti">
   <div class="wrap">
     <div class="chiusura rivela">
       <h2>Partiamo da Milano.</h2>
       <p>Domande, collaborazioni con associazioni studentesche o segnalazioni: scrivici, ti risponde direttamente il team.</p>
-      <div class="hero-actions store-btns" hidden>
-        <a class="btn btn-bianco" href="https://apps.apple.com/it/app/id6810596502" target="_blank" rel="noopener">App Store</a>
-        <a class="btn btn-bianco" href="https://play.google.com/store/apps/details?id=org.unibooks.app" target="_blank" rel="noopener">Google Play</a>
-      </div>
+      <div data-store-pronto hidden><div class="badge-store-riga centro"><a class="badge-store" data-store="ios" href="https://apps.apple.com/it/app/id6810596502" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.15-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.02.08 2.07-.52 2.71-1.28z"/></svg><span><small data-store-etichetta>Scarica su</small>App Store</span></a><a class="badge-store" data-store="android" href="https://play.google.com/store/apps/details?id=org.unibooks.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.1 2.6c-.2.2-.3.6-.3 1v16.8c0 .4.1.8.3 1l9.4-9.4z" fill="#00D7FE"/><path d="M16.6 8.9 5.8 2.7c-.6-.4-1.2-.4-1.7-.1l9.4 9.4z" fill="#32E17E"/><path d="M19.8 10.7l-3.2-1.8-3.1 3.1 3.1 3.1 3.2-1.8c.9-.5.9-2.1 0-2.6z" fill="#FFC300"/><path d="M4.1 21.4c.5.3 1.1.3 1.7-.1l10.8-6.2-3.1-3.1z" fill="#FF3A44"/></svg><span><small data-store-etichetta>Disponibile su</small>Google Play</span></a></div></div>
       <div class="hero-actions">
         <a class="btn btn-bianco" href="mailto:cda.unithread@gmail.com">cda.unithread@gmail.com</a>
         <a class="btn btn-vetro" href="https://www.instagram.com/unithread.it" target="_blank" rel="noopener">Instagram</a>
@@ -218,6 +230,7 @@
         <a href="costi.html">Costi</a>
         <a href="faq.html">FAQ</a>
         <a href="chi-siamo.html">Chi siamo</a>
+        <a href="index.html#scarica">Scarica l'app</a>
       </div>
       <div>
         <b>Documenti</b>
@@ -232,6 +245,7 @@
   </div>
 </footer>
 
+<script src="stile/store.js?v=1"></script>
 <script src="stile/sito.js?v=4"></script>
 <script src="stile/home.js?v=4"></script>
 </body>

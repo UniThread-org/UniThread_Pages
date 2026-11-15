@@ -12,15 +12,12 @@
 <link rel="canonical" href="https://unithread.it/scarica/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
 <link href="../fonts/fonts.css?v=2" rel="stylesheet">
+<script src="../stile/store.js?v=1"></script>
 <script>
   /* Pagina del QR dei volantini: un solo QR per iPhone e Android.
-     AL LANCIO: mettere a true la piattaforma appena l'app è pubblica sul suo store.
-     Finché è false, chi scansiona vede "In arrivo" invece di uno store che non trova l'app. */
-  var DISPONIBILE = { ios: false, android: false };
-  var STORE = {
-    ios: 'https://apps.apple.com/it/app/id6810596502',
-    android: 'https://play.google.com/store/apps/details?id=org.unibooks.app'
-  };
+     L'interruttore del lancio è in stile/store.js (UNITHREAD_STORE.disponibile). */
+  var DISPONIBILE = UNITHREAD_STORE.disponibile;
+  var STORE = UNITHREAD_STORE;
   var ua = navigator.userAgent || '';
   var piattaforma = /android/i.test(ua) ? 'android'
     : (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) ? 'ios'

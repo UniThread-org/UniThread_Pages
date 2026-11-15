@@ -367,3 +367,23 @@ input[type="range"]:focus-visible { outline: 3px solid #9CC4F2; outline-offset: 
   .parola, .entra { opacity: 1; transform: none; filter: none; animation: none; }
   .scr .book, .scr .chat > *, .bolle-tile .bolla { opacity: 1; transform: none; }
 }
+
+/* Sezione "Scarica l'app" con QR (verso unithread.it/scarica) */
+.scarica { background: var(--surface); border-radius: 34px; box-shadow: var(--shadow-lg); padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.scarica .k { display: inline-block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--primary); }
+.scarica h2 { font-size: clamp(30px, 4.4vw, 48px); letter-spacing: -0.04em; margin-top: 10px; }
+.scarica h2 .punto { color: var(--primary-light); }
+.scarica p { color: var(--text-2); font-size: 18px; margin: 16px 0 0; max-width: 30em; }
+.scarica-qr { text-align: center; }
+.qr-cornice { width: 220px; height: 220px; background: #fff; border-radius: 26px; padding: 18px; box-shadow: 0 0 0 1px var(--divider), var(--shadow); }
+.qr-scarica { display: block; width: 100%; height: 100%; }
+.scarica-qr small { display: block; margin-top: 12px; font-size: 14px; color: var(--text-2); }
+.store-note a { color: var(--primary); font-weight: 600; }
+@media (max-width: 720px) {
+  .scarica { grid-template-columns: 1fr; padding: 32px 22px; gap: 28px; text-align: center; }
+  .scarica p { margin-left: auto; margin-right: auto; }
+  .scarica .badge-store-riga { justify-content: center; }
+  .scarica-qr, .solo-computer { display: none; } /* dal telefono il QR non serve: bastano i badge */
+}
+.scarica p a { color: var(--primary); font-weight: 600; }
+.chiusura .badge-store-riga { margin: 0 0 16px; }

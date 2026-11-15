@@ -133,3 +133,14 @@ footer.piede { padding: 52px 0 44px; color: var(--text-2); font-size: 14.5px; bo
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .rivela { opacity: 1; transform: none; }
 }
+
+/* Badge degli store (stile dei badge ufficiali). Prima del lancio: "In arrivo su", attenuati e non cliccabili (stile/store.js). */
+.badge-store-riga { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.badge-store-riga.centro { justify-content: center; }
+.badge-store { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; border-radius: 12px; padding: 9px 18px 9px 14px; min-width: 172px; min-height: 54px; text-decoration: none; border: 1px solid rgba(255,255,255,.18); transition: transform .3s var(--ease), opacity .3s; }
+.badge-store:hover { text-decoration: none; transform: translateY(-2px); }
+.badge-store svg { width: 28px; height: 28px; flex: none; }
+.badge-store span { display: flex; flex-direction: column; line-height: 1.1; font-size: 20px; font-weight: 600; letter-spacing: -.01em; }
+.badge-store small { font-size: 11px; font-weight: 500; opacity: .85; letter-spacing: .02em; }
+.badge-store.in-arrivo { opacity: .45; cursor: default; pointer-events: none; }
+[data-store-attesa][hidden], [data-store-pronto][hidden] { display: none !important; }
