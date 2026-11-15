@@ -1,0 +1,21 @@
+/* Pagina "Diventa tester Android" (tester.html). */
+.tester-griglia { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: start; }
+.tester-info .k { font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--verde); }
+.tester-info h2 { margin: 6px 0 18px; }
+.tester-passi { margin: 0 0 18px; padding-left: 22px; display: grid; gap: 12px; line-height: 1.5; }
+.tester-passi b { color: var(--text); }
+.tester-nota { color: var(--text-2); font-size: 15px; }
+.tester-form { background: var(--surface); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); display: grid; gap: 14px; }
+.tester-form > label { font-weight: 600; font-size: 15px; }
+.tester-form input[type=email] { font: inherit; font-size: 17px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--divider); background: var(--bg); color: var(--text); width: 100%; box-sizing: border-box; }
+.tester-form input[type=email]:focus { outline: 2px solid var(--primary-light); outline-offset: 1px; border-color: transparent; }
+.tester-form > label.tester-consenso { font-weight: 400; }
+.tester-consenso { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-2); line-height: 1.45; }
+.tester-consenso input { margin-top: 3px; width: 18px; height: 18px; flex: none; accent-color: var(--primary); }
+.tester-form .btn { width: 100%; justify-content: center; border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.tester-form .btn[disabled] { opacity: .6; cursor: default; }
+.tester-trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.tester-esito { margin: 0; min-height: 1.4em; font-size: 15px; line-height: 1.45; }
+.tester-esito.ok { color: var(--verde); background: var(--tinta-verde); padding: 12px 14px; border-radius: 12px; }
+.tester-esito.errore { color: var(--rosso); }
+@media (max-width: 800px) { .tester-griglia { grid-template-columns: 1fr; } .tester-form { padding: 22px; } }
