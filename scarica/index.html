@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scarica UniThread</title>
+<meta name="description" content="Scarica UniThread, l'app per comprare e vendere libri universitari usati tra studenti. Disponibile per iPhone e Android.">
+<meta name="theme-color" content="#1A5CBD">
+<meta property="og:title" content="Scarica UniThread">
+<meta property="og:description" content="Compri e vendi libri universitari usati tra studenti della tua università.">
+<meta property="og:url" content="https://unithread.it/scarica/">
+<link rel="canonical" href="https://unithread.it/scarica/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="../fonts/fonts.css?v=2" rel="stylesheet">
+<script>
+  /* Pagina del QR dei volantini: un solo QR per iPhone e Android.
+     AL LANCIO: mettere a true la piattaforma appena l'app è pubblica sul suo store.
+     Finché è false, chi scansiona vede "In arrivo" invece di uno store che non trova l'app. */
+  var DISPONIBILE = { ios: false, android: false };
+  var STORE = {
+    ios: 'https://apps.apple.com/it/app/id6810596502',
+    android: 'https://play.google.com/store/apps/details?id=org.unibooks.app'
+  };
+  var ua = navigator.userAgent || '';
+  var piattaforma = /android/i.test(ua) ? 'android'
+    : (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) ? 'ios'
+    : null;
+  if (piattaforma && DISPONIBILE[piattaforma] && !/[?&]resta\b/.test(location.search)) {
+    location.replace(STORE[piattaforma]);
+  }
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1A5CBD;color:#fff;
+    display:flex;align-items:center;justify-content:center;min-height:100vh;padding:32px 16px calc(32px + env(safe-area-inset-bottom))}
+  main{width:100%;max-width:420px;text-align:center}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:24px;color:#fff;text-decoration:none;letter-spacing:-.3px}
+  .logo svg{width:40px;height:40px}
+  h1{font-size:38px;line-height:1.08;letter-spacing:-1px;margin:36px 0 12px;font-weight:700}
+  p.sub{font-size:18px;line-height:1.45;opacity:.92}
+  .btns{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#1259A9;text-decoration:none;font-weight:700;font-size:19px;
+    border-radius:16px;padding:16px 20px;min-height:60px}
+  .btn svg{width:24px;height:24px;flex:none}
+  .btn small{display:block;font-size:12px;font-weight:600;opacity:.7;text-transform:uppercase;letter-spacing:.4px}
+  .btn .t{text-align:left;line-height:1.15}
+  .btn.off{background:rgba(255,255,255,.14);color:#fff;pointer-events:none}
+  .btn.tua{box-shadow:0 0 0 3px #5FB0FF}
+  .nota{margin-top:28px;font-size:15px;line-height:1.5;opacity:.9}
+  .nota a{color:#fff;font-weight:700}
+  footer{margin-top:36px;font-size:13px;opacity:.75}
+  footer a{color:#fff}
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="../index.html" aria-label="UniThread, pagina iniziale">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff"/><path d="M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z" fill="#1565C0"/><path d="M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z" fill="#1565C0"/></svg>
+    UniThread
+  </a>
+  <h1 id="titolo">Scarica UniThread</h1>
+  <p class="sub">Compri e vendi libri universitari usati, tra studenti della tua università.</p>
+  <div class="btns">
+    <a class="btn" id="ios" href="https://apps.apple.com/it/app/id6810596502" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.15-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.02.08 2.07-.52 2.71-1.28z"/></svg>
+      <span class="t"><small id="ios-s">Scarica su</small>App Store</span>
+    </a>
+    <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=org.unibooks.app" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.1 2.6c-.2.2-.3.6-.3 1v16.8c0 .4.1.8.3 1l9.4-9.4zM16.6 8.9 5.8 2.7l8.6 8.6zM19.8 10.7l-2.4-1.4-2.4 2.4 2.4 2.4 2.4-1.4c.7-.4.7-1.6 0-2zM5.8 21.3l10.8-6.2-2.2-2.2z"/></svg>
+      <span class="t"><small id="android-s">Disponibile su</small>Google Play</span>
+    </a>
+  </div>
+  <p class="nota" id="nota" hidden>L'app sta per uscire: segui <a href="https://instagram.com/unithread.it" rel="noopener">@unithread.it</a> su Instagram per sapere quando è disponibile.</p>
+  <footer><a href="../index.html">unithread.it</a></footer>
+</main>
+<script>
+  ['ios','android'].forEach(function (k) {
+    var b = document.getElementById(k);
+    if (!DISPONIBILE[k]) { b.classList.add('off'); b.removeAttribute('href'); document.getElementById(k + '-s').textContent = 'In arrivo su'; }
+    if (k === piattaforma) b.classList.add('tua');
+  });
+  if (!DISPONIBILE.ios || !DISPONIBILE.android) document.getElementById('nota').hidden = false;
+  if (!DISPONIBILE.ios && !DISPONIBILE.android) document.getElementById('titolo').textContent = 'UniThread arriva a breve';
+</script>
+</body>
+</html>
