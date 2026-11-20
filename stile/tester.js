@@ -29,7 +29,7 @@
     }).then(function (x) {
       if (x.ok && x.d.ok) {
         form.email.value = '';
-        mostra('Fatto! Ti abbiamo mandato un'email (controlla anche Spam e Promozioni). Entro 24 ore ti aggiungiamo alla lista: poi apri il link dell'email dal telefono e installa l'app.', 'ok');
+        mostra('Fatto! Controlla la posta (anche Spam e Promozioni) e apri l'email dal telefono: tre pulsanti e sei dentro.', 'ok');
       } else {
         mostra(x.d.error || 'Qualcosa è andato storto. Riprova tra poco.', 'errore');
       }
