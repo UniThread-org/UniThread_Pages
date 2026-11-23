@@ -4,8 +4,25 @@
 var UNITHREAD_STORE = {
   disponibile: { ios: false, android: false },
   ios: 'https://apps.apple.com/it/app/id6810596502',
-  android: 'https://play.google.com/store/apps/details?id=org.unibooks.app'
+  android: 'https://play.google.com/store/apps/details?id=org.unibooks.app',
+  // Provider token di App Store Connect (App Analytics → Campagne → "Genera un link": è il numero dopo pt=).
+  // Vuoto = Apple ignora la campagna (ct). Non è un segreto.
+  appleProviderToken: ''
 };
+
+/* Da dove arriva chi scarica: ?da=instagram (bio, post), ?da=volantino, ecc.
+   Senza ?da: "volantino" su /scarica (il QR stampato), "sito" sulle altre pagine.
+   Finisce solo nelle statistiche aggregate degli store (App Store Connect → Campagne,
+   Play Console → Acquisizione utenti): nessun cookie, nessun dato personale. */
+(function () {
+  var S = UNITHREAD_STORE;
+  var m = /[?&]da=([a-z0-9-]{1,30})/i.exec(location.search);
+  var fonte = m ? m[1].toLowerCase() : (/\/scarica\/?$/.test(location.pathname) ? 'volantino' : 'sito');
+  S.fonte = fonte;
+  S.ios += '?ct=' + fonte + '&mt=8' + (S.appleProviderToken ? '&pt=' + S.appleProviderToken : '');
+  S.android += '&referrer=' + encodeURIComponent('utm_source=' + fonte + '&utm_medium=' +
+    (fonte === 'sito' ? 'web' : fonte === 'volantino' ? 'qr' : 'social') + '&utm_campaign=lancio');
+})();
 
 (function () {
   var S = UNITHREAD_STORE;
