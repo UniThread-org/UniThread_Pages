@@ -17,7 +17,7 @@ var UNITHREAD_STORE = {
 (function () {
   var S = UNITHREAD_STORE;
   var m = /[?&]da=([a-z0-9-]{1,30})/i.exec(location.search);
-  var fonte = m ? m[1].toLowerCase() : (/\/scarica\/?$/.test(location.pathname) ? 'volantino' : 'sito');
+  var fonte = m ? m[1].toLowerCase() : (/\/scarica(\/(index\.html)?)?$/.test(location.pathname) ? 'volantino' : 'sito');
   S.fonte = fonte;
   S.ios += '?ct=' + fonte + '&mt=8' + (S.appleProviderToken ? '&pt=' + S.appleProviderToken : '');
   S.android += '&referrer=' + encodeURIComponent('utm_source=' + fonte + '&utm_medium=' +
