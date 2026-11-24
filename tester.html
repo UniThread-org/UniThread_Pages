@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://amsjwaihvivqtiaehwja.supabase.co https://ubceumtnggycthxolbhs.supabase.co; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Diventa tester Android — UniThread</title>
 <meta name="description" content="Prova UniThread su Android prima di tutti: lascia la tua email e ricevi il link per installare la versione di prova.">
@@ -66,7 +67,7 @@
       <label for="tester-email">Email dell'account Google</label>
       <input id="tester-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nome@gmail.com" required maxlength="254">
       <div class="tester-trappola" aria-hidden="true"><label for="tester-sito">Sito web</label><input id="tester-sito" name="sito" type="text" tabindex="-1" autocomplete="off"></div>
-      <label class="tester-consenso"><input id="tester-consenso" name="consenso" type="checkbox" required> <span>Ho almeno 18 anni e ho letto l'<a href="privacy-policy.html#tester" target="_blank">informativa privacy</a>: la mia email serve solo per il test e viene cancellata entro 90 giorni.</span></label>
+      <label class="tester-consenso"><input id="tester-consenso" name="consenso" type="checkbox" required> <span>Ho almeno 18 anni e ho letto l'<a href="privacy-policy.html#tester" target="_blank" rel="noopener">informativa privacy</a>: la mia email serve solo per il test e viene cancellata entro 90 giorni.</span></label>
       <button class="btn btn-blu" type="submit">Diventa tester Android</button>
       <p class="tester-esito" id="tester-esito" role="status" aria-live="polite"></p>
     </form>
@@ -111,6 +112,6 @@
 
 <script src="stile/sito.js?v=4"></script>
 <script src="stile/home.js?v=4"></script>
-<script src="stile/tester.js?v=2"></script>
+<script src="stile/tester.js?v=3"></script>
 </body>
 </html>

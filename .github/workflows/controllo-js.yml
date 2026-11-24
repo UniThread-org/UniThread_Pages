@@ -1,0 +1,20 @@
+# Controllo sintassi degli script del sito: un errore (es. un apostrofo in una stringa
+# tra apici singoli) blocca tutta la pagina senza avvisi. Successo il 20/11/2026 su tester.js:
+# il modulo tester non inviava più nulla.
+name: Controllo JS
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  sintassi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: node --check su stile/*.js
+        run: for f in stile/*.js; do node --check "$f" || exit 1; done
