@@ -2,7 +2,7 @@
    AL LANCIO: mettere a true la piattaforma appena l'app è pubblica sul suo store.
    Vale per tutto il sito (home, Chi siamo) e per unithread.it/scarica (il QR dei volantini). */
 var UNITHREAD_STORE = {
-  disponibile: { ios: false, android: false },
+  disponibile: { ios: true, android: false },
   ios: 'https://apps.apple.com/it/app/id6810596502',
   android: 'https://play.google.com/store/apps/details?id=org.unibooks.app',
   // Provider token di App Store Connect (App Analytics → Campagne → "Genera un link": è il numero dopo pt=).
