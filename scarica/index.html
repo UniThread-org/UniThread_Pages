@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://unithread.it/scarica/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231565C0'/%3E%3Cpath d='M16 13a2 2 0 0 1 2-2h20v34l-9-4.6L16 51z' fill='%23fff'/%3E%3Cpath d='M39.5 11H46a2 2 0 0 1 2 2v38l-8.5-4.4z' fill='%23fff'/%3E%3C/svg%3E">
 <link href="../fonts/fonts.css?v=2" rel="stylesheet">
-<script src="../stile/store.js?v=2"></script>
+<script src="../stile/store.js?v=3"></script>
 <script>
   /* Pagina del QR dei volantini: un solo QR per iPhone e Android.
      L'interruttore del lancio è in stile/store.js (UNITHREAD_STORE.disponibile). */
@@ -69,15 +69,18 @@
     </a>
   </div>
   <p class="nota" id="nota" hidden>L'app sta per uscire: segui <a href="https://instagram.com/unithread.it" rel="noopener">@unithread.it</a> su Instagram per sapere quando è disponibile. Hai Android? <a href="../tester.html">Diventa tester</a> e provala subito.</p>
+  <p class="nota" id="nota-android" hidden>Su Android arriva a breve: segui <a href="https://instagram.com/unithread.it" rel="noopener">@unithread.it</a> per sapere quando. Intanto puoi <a href="../tester.html">diventare tester</a> e provarla subito.</p>
   <footer><a href="../index.html">unithread.it</a></footer>
 </main>
 <script>
   ['ios','android'].forEach(function (k) {
     var b = document.getElementById(k);
+    if (DISPONIBILE[k]) b.href = STORE[k];
     if (!DISPONIBILE[k]) { b.classList.add('off'); b.removeAttribute('href'); document.getElementById(k + '-s').textContent = 'In arrivo su'; }
     if (k === piattaforma) b.classList.add('tua');
   });
-  if (!DISPONIBILE.ios || !DISPONIBILE.android) document.getElementById('nota').hidden = false;
+  if (!DISPONIBILE.ios && !DISPONIBILE.android) document.getElementById('nota').hidden = false;
+  else if (DISPONIBILE.ios && !DISPONIBILE.android) document.getElementById('nota-android').hidden = false;
   if (!DISPONIBILE.ios && !DISPONIBILE.android) document.getElementById('titolo').textContent = 'UniThread arriva a breve';
 </script>
 </body>
