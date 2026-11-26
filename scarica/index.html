@@ -44,10 +44,12 @@
   .btn .t{text-align:left;line-height:1.15}
   .btn.off{background:rgba(255,255,255,.14);color:#fff;pointer-events:none}
   .btn.tua{box-shadow:0 0 0 3px #5FB0FF}
-  .nota{margin-top:28px;font-size:15px;line-height:1.5;opacity:.9}
+  .nota{margin-top:28px;font-size:17px;line-height:1.5;opacity:.95}
   .nota a{color:#fff;font-weight:700}
-  footer{margin-top:36px;font-size:13px;opacity:.75}
-  footer a{color:#fff}
+  .link-grandi{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+  .link-grande{display:flex;align-items:center;justify-content:center;gap:10px;border:2px solid rgba(255,255,255,.55);color:#fff;text-decoration:none;font-weight:700;font-size:17px;border-radius:14px;padding:14px 18px;min-height:52px}
+  .link-grande svg{width:22px;height:22px;flex:none}
+  footer{margin-top:28px}
 </style>
 </head>
 <body>
@@ -69,8 +71,11 @@
     </a>
   </div>
   <p class="nota" id="nota" hidden>L'app sta per uscire: segui <a href="https://instagram.com/unithread.it" rel="noopener">@unithread.it</a> su Instagram per sapere quando è disponibile. Hai Android? <a href="../tester.html">Diventa tester</a> e provala subito.</p>
-  <p class="nota" id="nota-android" hidden>Su Android arriva a breve: segui <a href="https://instagram.com/unithread.it" rel="noopener">@unithread.it</a> per sapere quando. Intanto puoi <a href="../tester.html">diventare tester</a> e provarla subito.</p>
-  <footer><a href="../index.html">unithread.it</a></footer>
+  <div id="nota-android" hidden>
+    <p class="nota">Su Android arriva a breve. Intanto puoi provarla da tester.</p>
+    <div class="link-grandi"><a class="link-grande" href="../tester.html"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.1 2.6c-.2.2-.3.6-.3 1v16.8c0 .4.1.8.3 1l9.4-9.4zM16.6 8.9 5.8 2.7l8.6 8.6zM19.8 10.7l-2.4-1.4-2.4 2.4 2.4 2.4 2.4-1.4c.7-.4.7-1.6 0-2zM5.8 21.3l10.8-6.2-2.2-2.2z"/></svg>Diventa tester Android</a><a class="link-grande" href="https://instagram.com/unithread.it" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Seguici su Instagram</a></div>
+  </div>
+  <footer><a class="link-grande" href="../index.html">Scopri UniThread su unithread.it</a></footer>
 </main>
 <script>
   ['ios','android'].forEach(function (k) {
