@@ -143,4 +143,4 @@ footer.piede { padding: 52px 0 44px; color: var(--text-2); font-size: 14.5px; bo
 .badge-store span { display: flex; flex-direction: column; line-height: 1.1; font-size: 20px; font-weight: 600; letter-spacing: -.01em; }
 .badge-store small { font-size: 11px; font-weight: 500; opacity: .85; letter-spacing: .02em; }
 .badge-store.in-arrivo { opacity: .45; cursor: default; pointer-events: none; }
-[data-store-attesa][hidden], [data-store-pronto][hidden] { display: none !important; }
+[data-store-attesa][hidden], [data-store-pronto][hidden], [data-android-attesa][hidden], [data-android-pronto][hidden] { display: none !important; }

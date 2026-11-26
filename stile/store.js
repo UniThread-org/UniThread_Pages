@@ -43,6 +43,9 @@ var UNITHREAD_STORE = {
     // Blocchi da mostrare solo prima / solo dopo il lancio
     document.querySelectorAll('[data-store-attesa]').forEach(function (el) { el.hidden = qualcuna; });
     document.querySelectorAll('[data-store-pronto]').forEach(function (el) { el.hidden = !qualcuna; });
+    // Invito tester Android: visibile finché l'app non è su Google Play
+    document.querySelectorAll('[data-android-attesa]').forEach(function (el) { el.hidden = S.disponibile.android; });
+    document.querySelectorAll('[data-android-pronto]').forEach(function (el) { el.hidden = !S.disponibile.android; });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', applica);
   else applica();
